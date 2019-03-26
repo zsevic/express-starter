@@ -86,3 +86,6 @@ typings/
 
 # vscode settings
 .vscode
+
+# build output
+dist
