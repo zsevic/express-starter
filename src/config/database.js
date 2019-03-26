@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import constants from './constants'
 
 mongoose.Promise = global.Promise
+mongoose.set('useCreateIndex', true)
 
 try {
   mongoose.connect(
