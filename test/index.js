@@ -1,10 +1,9 @@
-import request from 'supertest'
-import app from '../src'
-
 describe('API tests', () => {
   it('GET /', done => {
-    request(app)
-      .get('/')
-      .expect(200, done)
+    api.get('/').expect(200, done)
+  })
+
+  it('GET /api/custom', done => {
+    api.get('/api/custom').expect(200, done)
   })
 })
