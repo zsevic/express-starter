@@ -11,10 +11,24 @@ yarn
 yarn dev
 ```
 
+### :construction_worker: Build
+
+```bash
+yarn build
+yarn start
+```
+
 ### :rotating_light: Testing
 
 ```bash
 yarn test
+```
+
+### :arrow_right: Usage
+
+```
+GET /
+GET /api/custom
 ```
 
 ### :package: Technologies used
