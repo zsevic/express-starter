@@ -1,5 +1,8 @@
+import { Router } from 'express'
 import customRoutes from './custom/custom.routes'
 
-export default app => {
-  app.use('/api/custom', customRoutes)
-}
+const apiRouter = Router()
+
+apiRouter.use('/custom', customRoutes)
+
+export default apiRouter

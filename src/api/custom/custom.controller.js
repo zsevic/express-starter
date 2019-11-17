@@ -1,10 +1,10 @@
-import Custom from './custom.model'
+import * as customService from './custom.service'
 
-export async function getCustom (req, res) {
+export async function getCustomListHandler (req, res) {
   try {
-    const custom = await Custom.find({})
+    const customList = await customService.getCustomList()
 
-    return res.status(200).json(custom)
+    return res.status(200).json(customList)
   } catch (e) {
     return res.status(400).json(e)
   }

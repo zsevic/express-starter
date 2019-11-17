@@ -1,8 +1,8 @@
 import { Router } from 'express'
 import * as customController from './custom.controller'
 
-const routes = new Router()
+const customRouter = Router()
 
-routes.get('/', customController.getCustom)
+customRouter.get('/', customController.getCustomListHandler)
 
-export default routes
+export default customRouter
