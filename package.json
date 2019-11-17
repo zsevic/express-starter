@@ -4,20 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node src",
     "build": "babel src --out-dir dist",
+    "dev": "nodemon --exec babel-node src",
+    "lint": "eslint --ignore-path .eslintignore .",
+    "lint-fix": "eslint --fix --ignore-path .eslintignore .",
     "start": "node dist",
-    "pretest": "eslint --fix --ignore-path .eslintignore .",
     "test": "mocha"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@hapi/joi": "^16.1.7",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
+    "express-joi-validation": "^4.0.2",
     "mongoose": "^5.4.19",
     "morgan": "^1.9.1"
   },
