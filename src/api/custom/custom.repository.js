@@ -1,5 +1,5 @@
-import Custom from './custom.model'
+import Custom from './custom.model';
 
-export async function getCustomList () {
-  return Custom.find({})
+export async function getCustomList() {
+  return Custom.find({});
 }

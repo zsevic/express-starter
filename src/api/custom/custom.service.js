@@ -1,5 +1,5 @@
-import * as customRepository from './custom.repository'
+import * as customRepository from './custom.repository';
 
-export async function getCustomList () {
-  return customRepository.getCustomList()
+export async function getCustomList() {
+  return customRepository.getCustomList();
 }

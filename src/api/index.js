@@ -1,8 +1,8 @@
-import { Router } from 'express'
-import customRoutes from './custom/custom.routes'
+import { Router } from 'express';
+import customRoutes from './custom/custom.routes';
 
-const apiRouter = Router()
+const apiRouter = Router();
 
-apiRouter.use('/custom', customRoutes)
+apiRouter.use('/custom', customRoutes);
 
-export default apiRouter
+export default apiRouter;

@@ -1,4 +1,4 @@
-import request from 'supertest'
-import app from '../src'
+import request from 'supertest';
+import app from '../src';
 
-global.api = request(app)
+global.api = request(app);

@@ -1,9 +1,9 @@
-import mongoose, { Schema } from 'mongoose'
+import mongoose, { Schema } from 'mongoose';
 
 const CustomSchema = new Schema({
   name: {
-    type: String
-  }
-})
+    type: String,
+  },
+});
 
-export default mongoose.model('Custom', CustomSchema)
+export default mongoose.model('Custom', CustomSchema);
