@@ -3,12 +3,11 @@ import constants from './constants'
 
 mongoose.Promise = global.Promise
 mongoose.set('useCreateIndex', true)
+mongoose.set('useNewUrlParser', true)
+mongoose.set('useUnifiedTopology', true)
 
 try {
-  mongoose.connect(
-    constants.MONGODB_URL,
-    { useNewUrlParser: true }
-  )
+  mongoose.connect(constants.MONGODB_URL)
 } catch (err) {
   mongoose.createConnection(constants.MONGODB_URL)
 }
