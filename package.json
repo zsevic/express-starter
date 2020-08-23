@@ -15,15 +15,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@hapi/joi": "^16.1.7",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
-    "express-joi-validation": "^4.0.2",
+    "express-joi-validation": "^4.0.4-beta.0",
     "express-swagger-generator": "^1.1.15",
+    "joi": "^17.2.1",
     "mongoose": "^5.4.19",
     "morgan": "^1.9.1"
+  },
+  "peerDependencies": {
+    "@hapi/joi": "^16.1.8"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
