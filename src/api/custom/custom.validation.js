@@ -1,5 +1,7 @@
-import Joi from 'joi';
+import { celebrate, Joi, Segments } from 'celebrate';
 
-export const customQuery = Joi.object({
-  name: Joi.string().min(5).optional(),
+export default celebrate({
+  [Segments.QUERY]: {
+    name: Joi.string().min(5).optional(),
+  },
 });
