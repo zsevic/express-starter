@@ -7,7 +7,7 @@
     "build": "babel src --out-dir dist",
     "dev": "nodemon -r dotenv/config --exec babel-node src",
     "lint": "eslint --ignore-path .eslintignore .",
-    "lint-fix": "eslint --fix --ignore-path .eslintignore .",
+    "lint:fix": "npm run lint -- --fix",
     "start": "node dist",
     "test": "mocha"
   },

@@ -1,35 +1,42 @@
 # express-starter
+
 > Minimal Express boilerplate
 
-### :wrench: Setup
+### Setup
 
 ```bash
 git clone https://github.com/zsevic/express-starter
 cd express-starter
 cp .env.sample .env # change values
 npm i
+mongod --dbpath=mongodb/data
 npm run dev
 ```
 
-### :construction_worker: Build
+### Build
 
 ```bash
 npm run build
 npm start
 ```
 
-### :rotating_light: Testing
+### Linting
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+### Testing
 
 ```bash
 npm test
 ```
 
-### :arrow_right: Usage
+### API documentation
 
-```
-GET /
-GET /api/custom
-```
+Generated at `/api-docs` endpoint using [express-swagger-generator](https://www.npmjs.com/package/express-swagger-generator) plugin
 
-### :package: Technologies used
-* Node.js, Express, MongoDB
+### Technologies used
+
+- Node.js, Express, MongoDB
