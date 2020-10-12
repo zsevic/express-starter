@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import * as customController from './custom.controller';
 import customValidation from './custom.validation';
+import { asyncWrap } from '../../utils';
 
 const customRouter = Router();
 /**
@@ -11,6 +12,10 @@ const customRouter = Router();
  * @returns {object} 200 - An array of custom info
  * @returns {Error} 400 - Error validating request query.
  */
-customRouter.get('/', customValidation, customController.getCustomListHandler);
+customRouter.get(
+  '/',
+  customValidation,
+  asyncWrap(customController.getCustomListHandler),
+);
 
 export default customRouter;
