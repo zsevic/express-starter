@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import registerApiDocs from 'express-swagger-generator';
+import 'dotenv/config';
 import './config/database';
 import apiRoutes from './api';
 import constants from './config/constants';
@@ -17,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 registerApiDocs(app)(options);
 
-app.get('/', (req, res) => {
+app.get('/', (_, res) => {
   res.end('Hello from express-starter');
 });
 app.use('/api', apiRoutes);
