@@ -2,9 +2,7 @@ import mongoose from 'mongoose';
 import constants from './constants';
 
 mongoose.Promise = global.Promise;
-mongoose.set('useCreateIndex', true);
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
+mongoose.set('strictQuery', false);
 
 try {
   mongoose.connect(constants.MONGODB_URL);
