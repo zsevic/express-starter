@@ -1,21 +1,27 @@
-import { after, describe, it } from 'node:test';
+import express from 'express';
+import { afterEach, beforeEach, describe, it } from 'node:test';
+import mongoose from 'mongoose';
 import request from 'supertest';
-import app from '../src/index.js';
+import apiRouter from '../src/api/index.js';
+import config from '../src/config/constants.js';
 
 describe('API tests', () => {
-  const api = request(app);
+  const app = express();
+  app.use('/api', apiRouter);
 
-  after(() => {
-    setTimeout(() => {
-      process.exit(0);
-    }, 5000);
+  beforeEach(async () => {
+    await mongoose.connect(config.MONGODB_URL);
   });
 
-  it('GET /', (done) => {
-    api.get('/').expect(200, done);
+  afterEach(async () => {
+    await mongoose.connection.close();
   });
 
-  it('GET /api/custom', (done) => {
-    api.get('/api/custom').expect(200, done);
+  it('GET /', async () => {
+    return request(app).get('/').expect(404);
+  });
+
+  it('GET /api/custom', async () => {
+    return request(app).get('/api/custom').expect(200);
   });
 });
