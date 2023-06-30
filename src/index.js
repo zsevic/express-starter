@@ -8,6 +8,7 @@ import './config/database';
 import apiRoutes from './api';
 import constants from './config/constants';
 import { options } from './config/swagger';
+import { logger } from './utils/logger';
 
 const app = express();
 const { PORT } = constants;
@@ -24,7 +25,7 @@ app.get('/', (_, res) => {
 app.use('/api', apiRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  logger.info(`Server is running on port ${PORT}`);
 });
 
 export default app;

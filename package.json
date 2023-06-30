@@ -27,7 +27,8 @@
     "express-swagger-generator": "^1.1.17",
     "joi": "^17.9.2",
     "mongoose": "^7.3.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "pino": "^8.14.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",

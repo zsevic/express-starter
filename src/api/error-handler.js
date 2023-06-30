@@ -1,10 +1,11 @@
 import { isBoom } from '@hapi/boom';
+import { logger } from '../utils/logger';
 
 // eslint-disable-next-line no-unused-vars
 export function errorHandler(err, req, res, next) {
   if (isBoom(err)) {
     return res.status(err.output.statusCode).send(err.output.payload.message);
   }
-  console.log('Server error:', err.message);
+  logger.error(`Server error: ${err.message}`);
   return res.sendStatus(500);
 }
