@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import * as customController from './custom.controller';
-import customValidation from './custom.validation';
-import { asyncWrap } from '../../utils';
+import * as customController from './custom.controller.js';
+import customValidation from './custom.validation.js';
+import { asyncWrap } from '../../utils/index.js';
 
 const customRouter = Router();
 /**

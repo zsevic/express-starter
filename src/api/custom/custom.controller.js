@@ -1,5 +1,5 @@
-import { logger } from '../../utils/logger';
-import * as customService from './custom.service';
+import { logger } from '../../utils/logger.js';
+import * as customService from './custom.service.js';
 
 export async function getCustomListHandler(_, res) {
   const customList = await customService.getCustomList();

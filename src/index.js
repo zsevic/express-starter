@@ -1,16 +1,16 @@
 /* eslint-disable import/first, import/order */
-import './tracing';
+import './tracing.js';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import morgan from 'morgan';
 import registerApiDocs from 'express-swagger-generator';
 import 'dotenv/config';
-import './config/database';
-import apiRoutes from './api';
-import constants from './config/constants';
-import { options } from './config/swagger';
-import { logger } from './utils/logger';
+import './config/database.js';
+import apiRoutes from './api/index.js';
+import constants from './config/constants.js';
+import { options } from './config/swagger.js';
+import { logger } from './utils/logger.js';
 
 const app = express();
 const { PORT } = constants;

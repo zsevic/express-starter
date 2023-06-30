@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "engines": {
     "node": "20.x"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "dev": "nodemon -r dotenv/config --exec babel-node src",
+    "dev": "node -r dotenv/config --watch src",
     "lint": "eslint --ignore-path .eslintignore .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "node dist",
-    "test": "mocha --exit"
+    "start": "node -r dotenv/config src",
+    "test": "node --test"
   },
   "keywords": [],
   "author": "",
@@ -37,17 +37,9 @@
     "pino": "^8.14.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.22.5",
-    "@babel/core": "^7.22.5",
-    "@babel/node": "^7.22.5",
-    "@babel/preset-env": "^7.22.5",
-    "@babel/register": "^7.22.5",
-    "chai": "^4.3.7",
     "eslint": "^8.43.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
-    "mocha": "^10.2.0",
-    "nodemon": "^2.0.22",
     "supertest": "^6.3.3"
   }
 }
