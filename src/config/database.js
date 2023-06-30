@@ -18,6 +18,7 @@ mongoose.connection
   .on('close', () => {
     logger.info('Connection with database is closed');
   })
-  .on('error', (e) => {
-    throw e;
+  .on('error', (error) => {
+    logger.error(error);
+    throw error;
   });
