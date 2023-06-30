@@ -15,6 +15,9 @@ mongoose.connection
   .once('open', () => {
     logger.info('Connection with database is established');
   })
+  .on('close', () => {
+    logger.info('Connection with database is closed');
+  })
   .on('error', (e) => {
     throw e;
   });
