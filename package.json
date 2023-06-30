@@ -19,6 +19,12 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/boom": "^10.0.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.37.1",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.40.0",
+    "@opentelemetry/resources": "^1.14.0",
+    "@opentelemetry/sdk-node": "^0.40.0",
+    "@opentelemetry/sdk-trace-base": "^1.14.0",
+    "@opentelemetry/semantic-conventions": "^1.14.0",
     "body-parser": "^1.20.2",
     "celebrate": "^15.0.1",
     "cors": "^2.8.5",

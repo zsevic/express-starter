@@ -1,3 +1,5 @@
+/* eslint-disable import/first, import/order */
+import './tracing';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
