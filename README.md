@@ -9,7 +9,7 @@ git clone https://github.com/zsevic/express-starter
 cd express-starter
 cp .env.sample .env # change values
 npm i
-mongod --dbpath=mongodb/data
+docker-compose up
 npm run dev
 ```
 
@@ -39,4 +39,4 @@ Generated at `/api-docs` endpoint using [express-swagger-generator](https://www.
 
 ### Technologies used
 
-- Node.js, Express, MongoDB
+- Node.js, Express, MongoDB, OpenTelemetry
