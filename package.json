@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "node -r dotenv/config --watch src",
+    "format": "prettier --write \"{src,test}/**/*.{js,ts}\"",
     "lint": "eslint --ignore-path .eslintignore .",
     "lint:fix": "npm run lint -- --fix",
     "start": "node -r dotenv/config src",
@@ -38,7 +39,9 @@
   "devDependencies": {
     "eslint": "^8.44.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
+    "prettier": "^2.8.8",
     "supertest": "^6.3.3"
   }
 }

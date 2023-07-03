@@ -1,7 +1,5 @@
 import express from 'express';
-import {
-  afterEach, beforeEach, describe, it,
-} from 'node:test';
+import { afterEach, beforeEach, describe, it } from 'node:test';
 import mongoose from 'mongoose';
 import request from 'supertest';
 import apiRouter from '../src/api/index.js';
@@ -21,5 +19,6 @@ describe('API tests', () => {
 
   it('GET /', async () => request(app).get('/').expect(404));
 
-  it('GET /api/custom', async () => request(app).get('/api/custom').expect(200));
+  it('GET /api/custom', async () =>
+    request(app).get('/api/custom').expect(200));
 });

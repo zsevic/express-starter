@@ -17,9 +17,7 @@ export const options = {
     },
     host: `localhost:${constants.PORT}`,
     basePath: '/api',
-    produces: [
-      'application/json',
-    ],
+    produces: ['application/json'],
     schemes: ['http', 'https'],
     securityDefinitions: {
       JWT: {
