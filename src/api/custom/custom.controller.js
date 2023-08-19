@@ -1,4 +1,4 @@
-import { logger } from '../../utils/logger.js';
+import { logger } from '#utils/logger.js';
 import * as customService from './custom.service.js';
 
 export async function getCustomListHandler(_, res) {

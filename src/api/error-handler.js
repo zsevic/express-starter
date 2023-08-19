@@ -1,5 +1,5 @@
 import { isBoom } from '@hapi/boom';
-import { logger } from '../utils/logger.js';
+import { logger } from '#utils/logger.js';
 
 // eslint-disable-next-line no-unused-vars
 export function errorHandler(err, req, res, next) {

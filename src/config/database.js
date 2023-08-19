@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import constants from './constants.js';
-import { logger } from '../utils/logger.js';
+import { logger } from '#utils/logger.js';
 
 mongoose.Promise = global.Promise;
 mongoose.set('strictQuery', false);
